@@ -5,248 +5,209 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design Color's - Quimper | Prothésiste Ongulaire</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script> <style>
+    <style>
         :root {
             --pastel-beige: #F5F5DC;
             --pastel-cream: #FFFDD0;
-            --pastel-orange: #FFDAB9;
-            --soft-text: #5D4037;
+            --pastel-orange: #FFDAB9; /* Pêche très doux */
+            --soft-brown: #8D6E63;
+            --text-color: #5D4037;
             --white: #FFFFFF;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            cursor: auto !important; /* Le curseur doit rester visible comme demandé */
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; cursor: auto !important; }
 
         body {
             font-family: 'Poppins', sans-serif;
             background-color: var(--pastel-cream);
-            color: var(--soft-text);
+            color: var(--text-color);
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        h1, h2 {
-            font-family: 'Playfair Display', serif;
-            color: #D2691E; /* Orange terre cuite doux */
-        }
+        /* DA : Tons Pastel & Crème */
+        h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--soft-brown); }
 
         header {
             background-color: var(--white);
-            padding: 2rem;
+            padding: 2.5rem;
             text-align: center;
-            border-bottom: 2px solid var(--pastel-orange);
+            border-bottom: 3px solid var(--pastel-orange);
         }
 
-        .logo {
-            max-width: 200px;
-            margin-bottom: 1rem;
-        }
+        .logo { max-width: 180px; margin-bottom: 1rem; border-radius: 50%; }
 
-        nav {
-            margin-top: 1rem;
-        }
-
-        .hero {
-            padding: 4rem 10%;
-            text-align: center;
-            background: linear-gradient(180deg, var(--white) 0%, var(--pastel-beige) 100%);
-        }
-
-        .btn-booking {
-            display: inline-block;
-            background-color: #D2691E;
-            color: white;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 500;
-            margin-top: 1.5rem;
-            transition: transform 0.3s;
-        }
-
-        .btn-booking:hover {
-            transform: scale(1.05);
-            background-color: #A0522D;
-        }
-
-        /* Bouton Instagram Flottant */
-        .insta-float {
+        /* BOUTONS SOCIAUX FLOTTANTS */
+        .social-sidebar {
             position: fixed;
-            bottom: 20px;
             right: 20px;
-            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
-            color: white;
-            width: 60px;
-            height: 60px;
+            bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 9999;
+        }
+
+        .social-btn {
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 30px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            z-index: 1000;
             text-decoration: none;
+            color: white;
+            font-size: 24px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            transition: transform 0.3s;
         }
 
-        .section {
-            padding: 3rem 10%;
+        .social-btn:hover { transform: scale(1.1); }
+        .insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .fb { background-color: #1877F2; }
+
+        /* SECTION HERO */
+        .hero {
+            padding: 5rem 10%;
+            text-align: center;
+            background: linear-gradient(180deg, var(--white) 0%, var(--pastel-beige) 100%);
         }
 
-        .grid-prices {
+        .btn-reserver {
+            display: inline-block;
+            background-color: var(--soft-brown);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            margin-top: 2rem;
+            box-shadow: 0 4px 15px rgba(141, 110, 99, 0.3);
+        }
+
+        /* TARIFS EXTRACTS */
+        .price-section { padding: 4rem 10%; background: var(--white); }
+        .price-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 15px;
-        }
-
-        .price-item {
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 1px dashed var(--pastel-orange);
-            padding: 0.5rem 0;
-        }
-
-        .reviews-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
             margin-top: 2rem;
         }
+        .price-category h3 { border-bottom: 2px solid var(--pastel-orange); padding-bottom: 0.5rem; margin-bottom: 1rem; }
+        .price-item { display: flex; justify-content: space-between; margin-bottom: 0.8rem; font-size: 1.1rem; }
 
-        .review-card {
-            background: var(--white);
-            padding: 1.5rem;
-            border-radius: 10px;
-            width: 300px;
-            border: 1px solid var(--pastel-orange);
-        }
-
-        .rating-star { color: #FFD700; }
-
-        .footer-info {
-            background: var(--soft-text);
-            color: var(--pastel-beige);
-            padding: 3rem 10%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-        }
-
-        iframe {
-            width: 100%;
-            border-radius: 15px;
-            margin-top: 1rem;
-        }
-
-    /* CSS POUR LA GALERIE */
+        /* GALERIE PHOTO */
+        .gallery { padding: 4rem 5%; background-color: var(--pastel-beige); }
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
             gap: 15px;
         }
-    
         .gallery-item {
-            height: 300px;
+            aspect-ratio: 1 / 1;
             overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            border-radius: 10px;
+            border: 4px solid var(--white);
         }
-    
-        .gallery-item:hover {
-            transform: scale(1.02);
-        }
-    
         .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Garde les proportions sans étirer l'image */
-            display: block;
+            width: 100%; height: 100%; object-fit: cover; transition: 0.4s;
         }
+        .gallery-item img:hover { transform: scale(1.1); }
+
+        /* AVIS GOOGLE & FB */
+        .reviews { padding: 4rem 10%; text-align: center; }
+        .score-box {
+            display: inline-block;
+            background: var(--pastel-orange);
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 1rem;
+        }
+
+        footer {
+            background-color: var(--soft-brown);
+            color: var(--white);
+            padding: 4rem 10%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .map-container iframe { width: 100%; border-radius: 15px; border: none; }
     </style>
 </head>
 <body>
 
-    <a href="https://www.instagram.com/designcolorsquimper" class="insta-float" target="_blank">
-        <i>📸</i>
-    </a>
+    <div class="social-sidebar">
+        <a href="https://www.facebook.com/p/Institut-Design-Colors-100038521916307/" class="social-btn fb" title="Facebook">f</a>
+        <a href="https://www.instagram.com/designcolorsquimper" class="social-btn insta" title="Instagram">📸</a>
+    </div>
 
     <header>
-        <img src="logo.png" alt="Design Color's Logo" class="logo">
-        <h1>Design Color's - Quimper</h1>
-        <p>L'art de sublimer vos mains</p>
+        <img src="logo.png" alt="Logo Design Color's" class="logo">
+        <h1>Design Color's</h1>
+        <p>Expertise Ongulaire à Quimper</p>
     </header>
 
     <section class="hero">
-        <h2>Spécialiste en Prothésie Ongulaire</h2>
-        <p>Vernis semi-permanent • Rallongement gel + chablon • Manucure & Pédicure</p>
-        <a href="tel:0298769952" class="btn-booking">Prendre rendez-vous : 02 98 76 99 52</a>
-        <br>
-        <a href="https://www.facebook.com/p/Institut-Design-Colors-100038521916307/" style="margin-top: 10px; display: inline-block;">Suivez-nous sur Facebook</a>
+        <h2>Sublimez vos mains et vos pieds</h2>
+        <p>Vernis semi-permanent • Rallongement gel + chablon • Manucure • Pédicure</p>
+        <a href="tel:0298769952" class="btn-reserver">Réserver au 02 98 76 99 52</a>
     </section>
 
-    <section class="section">
-        <h2>Nos Prestations & Tarifs</h2>
-        <div class="grid-prices">
-            <div>
+    <section class="price-section" id="tarifs">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Nos Prestations</h2>
+        <div class="price-grid">
+            <div class="price-category">
                 <h3>Mains</h3>
-                <div class="price-item"><span>Vernis Semi-Permanent</span> <span>30€</span></div>
+                <div class="price-item"><span>Vernis semi-permanent</span> <span>30€</span></div>
                 <div class="price-item"><span>Rallongement Gel + Chablon</span> <span>55€</span></div>
                 <div class="price-item"><span>Remplissage Gel</span> <span>45€</span></div>
-                <div class="price-item"><span>Manucure Express</span> <span>20€</span></div>
+                <div class="price-item"><span>Manucure classique</span> <span>25€</span></div>
+                <div class="price-item"><span>Dépose</span> <span>15€</span></div>
             </div>
-            <div>
+            <div class="price-category">
                 <h3>Pieds</h3>
                 <div class="price-item"><span>Beauté des pieds</span> <span>35€</span></div>
-                <div class="price-item"><span>Pose vernis pieds</span> <span>25€</span></div>
+                <div class="price-item"><span>Semi-permanent pieds</span> <span>30€</span></div>
+                <div class="price-item"><span>Soin Callosités</span> <span>20€</span></div>
             </div>
         </div>
     </section>
 
-      <section class="section">
-        <h2>Nos Réalisations</h2>
-        <p style="text-align: center; margin-bottom: 2rem;">Découvrez le travail de l'institut Design Color's</p>
-        
+    <section class="gallery">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Galerie Réalisations</h2>
         <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="photo-gel.jpg" alt="Rallongement Gel + Chablon">
-            </div>
-            <div class="gallery-item">
-                <img src="photo-vsp.jpg" alt="Vernis Semi-Permanent">
-            </div>
-            <div class="gallery-item">
-                <img src="photo-nailart.jpg" alt="Nail Art Design">
-            </div>
-            <div class="gallery-item">
-                <img src="photo-pedicure.jpg" alt="Pédicure">
-            </div>
-        </div>
-    </section>
-    <section class="section" style="background: var(--pastel-beige);">
-        <h2>Avis de nos clientes</h2>
-        <div style="text-align: center; margin-bottom: 1rem;">
-            <strong>Note Google : 4.3/5</strong> (78 avis) | 
-            <strong>Facebook : 94% recommandent</strong> (27 avis)
-        </div>
-        <div class="reviews-container">
-            <div class="review-card">
-                <p class="rating-star">★★★★★</p>
-                <p>"Travail soigné et accueil très chaleureux. Je recommande vivement !"</p>
-            </div>
-            <div class="review-card">
-                <p class="rating-star">★★★★☆</p>
-                <p>"Superbe pose de chablon, l'effet est très naturel. Merci !"</p>
-            </div>
+            <div class="gallery-item"><img src="25024398_172969200140798_1484633043036536832_n..jpg" alt="Ongles Design Colors"></div>
+            <div class="gallery-item"><img src="363387506_18295431163141147_5793126122529012319_n..jpg" alt="Réalisation Ongles"></div>
+            <div class="gallery-item"><img src="485647406_18378998404141147_6297883628877821139_n..jpg" alt="Nail Art Quimper"></div>
+            <div class="gallery-item"><img src="486091628_18378998383141147_527091771955611232_n..jpg" alt="Design Colors Quimper"></div>
+            <div class="gallery-item"><img src="528681326_18075128578958751_3959357607683452210_n..jpg" alt="Onglerie Quimper"></div>
+            <div class="gallery-item"><img src="619909194_18087728918026397_3416017751110998886_n..jpg" alt="Pose Gel"></div>
+            <div class="gallery-item"><img src="620791393_17977947644806507_252584392008338073_n..jpg" alt="Semi-permanent"></div>
+            <div class="gallery-item"><img src="626421335_18142381537482078_1627181717255063568_n..webp" alt="Vercel Photo"></div>
+            <div class="gallery-item"><img src="627044027_18309373225252800_9209069462208999939_n..webp" alt="Pose Ongles"></div>
+            <div class="gallery-item"><img src="629264893_18304277614275694_5764239219873673795_n..webp" alt="French Manucure"></div>
+            <div class="gallery-item"><img src="655435197_18070174583249745_2815759114294644038_n..webp" alt="Nail Art Design"></div>
+            <div class="gallery-item"><img src="660526267_18195725179355324_2383886516794855111_n..webp" alt="Design Colors Gallery"></div>
         </div>
     </section>
 
-    <footer class="footer-info">
+    <section class="reviews">
+        <h2>Ce que disent nos clientes</h2>
+        <div class="score-box">
+            <h3>Google Reviews</h3>
+            <p style="font-size: 2.5rem; font-weight: bold;">4.3 / 5</p>
+            <p>Basé sur 78 avis </p>
+        </div>
+        <div class="score-box">
+            <h3>Facebook</h3>
+            <p style="font-size: 2.5rem; font-weight: bold;">94%</p>
+            <p>Recommandent l'institut (27 avis)</p>
+        </div>
+    </section>
+
+    <footer>
         <div>
             <h3>Horaires d'ouverture</h3>
             <p>Lundi : 09:00 – 18:30</p>
@@ -257,11 +218,11 @@
             <p>Samedi : 09:00 – 14:00</p>
             <p>Dimanche : Fermé</p>
         </div>
-        <div>
-            <h3>Contact & Accès</h3>
+        <div class="map-container">
+            <h3>Nous trouver</h3>
             <p>10 Pl. du 118ÈME Régiment d'Infanterie<br>29000 Quimper</p>
-            <p>Tél : 02 98 76 99 52</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2669.97092697173!2d-4.109319999999999!3d47.994949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4810d59079569835%3A0x8e76d0d918e2d4af!2sDesign%20Color's%20-%20Quimper!5e0!3m2!1sfr!2sfr!4v1776237653740!5m2!1sfr!2sfr" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2666.861!2d-4.103!3d47.996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDU5JzQ1LjYiTiA0wrAwNicyMi44Ilc!5e0!3m2!1sfr!2sfr!4v1620000000000" height="250" loading="lazy"></iframe>
         </div>
     </footer>
 
