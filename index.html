@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Color's - Quimper | Prothésiste Ongulaire</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script> <style>
+        :root {
+            --pastel-beige: #F5F5DC;
+            --pastel-cream: #FFFDD0;
+            --pastel-orange: #FFDAB9;
+            --soft-text: #5D4037;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: auto !important; /* Le curseur doit rester visible comme demandé */
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--pastel-cream);
+            color: var(--soft-text);
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+            color: #D2691E; /* Orange terre cuite doux */
+        }
+
+        header {
+            background-color: var(--white);
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 2px solid var(--pastel-orange);
+        }
+
+        .logo {
+            max-width: 200px;
+            margin-bottom: 1rem;
+        }
+
+        nav {
+            margin-top: 1rem;
+        }
+
+        .hero {
+            padding: 4rem 10%;
+            text-align: center;
+            background: linear-gradient(180deg, var(--white) 0%, var(--pastel-beige) 100%);
+        }
+
+        .btn-booking {
+            display: inline-block;
+            background-color: #D2691E;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            margin-top: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .btn-booking:hover {
+            transform: scale(1.05);
+            background-color: #A0522D;
+        }
+
+        /* Bouton Instagram Flottant */
+        .insta-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        .section {
+            padding: 3rem 10%;
+        }
+
+        .grid-prices {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+        }
+
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dashed var(--pastel-orange);
+            padding: 0.5rem 0;
+        }
+
+        .reviews-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .review-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            width: 300px;
+            border: 1px solid var(--pastel-orange);
+        }
+
+        .rating-star { color: #FFD700; }
+
+        .footer-info {
+            background: var(--soft-text);
+            color: var(--pastel-beige);
+            padding: 3rem 10%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        iframe {
+            width: 100%;
+            border-radius: 15px;
+            margin-top: 1rem;
+        }
+
+    /* CSS POUR LA GALERIE */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+    
+        .gallery-item {
+            height: 300px;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+    
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+    
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Garde les proportions sans étirer l'image */
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://www.instagram.com/designcolorsquimper" class="insta-float" target="_blank">
+        <i>📸</i>
+    </a>
+
+    <header>
+        <img src="logo.png" alt="Design Color's Logo" class="logo">
+        <h1>Design Color's - Quimper</h1>
+        <p>L'art de sublimer vos mains</p>
+    </header>
+
+    <section class="hero">
+        <h2>Spécialiste en Prothésie Ongulaire</h2>
+        <p>Vernis semi-permanent • Rallongement gel + chablon • Manucure & Pédicure</p>
+        <a href="tel:0298769952" class="btn-booking">Prendre rendez-vous : 02 98 76 99 52</a>
+        <br>
+        <a href="https://www.facebook.com/p/Institut-Design-Colors-100038521916307/" style="margin-top: 10px; display: inline-block;">Suivez-nous sur Facebook</a>
+    </section>
+
+    <section class="section">
+        <h2>Nos Prestations & Tarifs</h2>
+        <div class="grid-prices">
+            <div>
+                <h3>Mains</h3>
+                <div class="price-item"><span>Vernis Semi-Permanent</span> <span>30€</span></div>
+                <div class="price-item"><span>Rallongement Gel + Chablon</span> <span>55€</span></div>
+                <div class="price-item"><span>Remplissage Gel</span> <span>45€</span></div>
+                <div class="price-item"><span>Manucure Express</span> <span>20€</span></div>
+            </div>
+            <div>
+                <h3>Pieds</h3>
+                <div class="price-item"><span>Beauté des pieds</span> <span>35€</span></div>
+                <div class="price-item"><span>Pose vernis pieds</span> <span>25€</span></div>
+            </div>
+        </div>
+    </section>
+
+      <section class="section">
+        <h2>Nos Réalisations</h2>
+        <p style="text-align: center; margin-bottom: 2rem;">Découvrez le travail de l'institut Design Color's</p>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="photo-gel.jpg" alt="Rallongement Gel + Chablon">
+            </div>
+            <div class="gallery-item">
+                <img src="photo-vsp.jpg" alt="Vernis Semi-Permanent">
+            </div>
+            <div class="gallery-item">
+                <img src="photo-nailart.jpg" alt="Nail Art Design">
+            </div>
+            <div class="gallery-item">
+                <img src="photo-pedicure.jpg" alt="Pédicure">
+            </div>
+        </div>
+    </section>
+    <section class="section" style="background: var(--pastel-beige);">
+        <h2>Avis de nos clientes</h2>
+        <div style="text-align: center; margin-bottom: 1rem;">
+            <strong>Note Google : 4.3/5</strong> (78 avis) | 
+            <strong>Facebook : 94% recommandent</strong> (27 avis)
+        </div>
+        <div class="reviews-container">
+            <div class="review-card">
+                <p class="rating-star">★★★★★</p>
+                <p>"Travail soigné et accueil très chaleureux. Je recommande vivement !"</p>
+            </div>
+            <div class="review-card">
+                <p class="rating-star">★★★★☆</p>
+                <p>"Superbe pose de chablon, l'effet est très naturel. Merci !"</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-info">
+        <div>
+            <h3>Horaires d'ouverture</h3>
+            <p>Lundi : 09:00 – 18:30</p>
+            <p>Mardi : 09:00 – 18:30</p>
+            <p>Mercredi : 09:00 – 14:00</p>
+            <p>Jeudi : 09:00 – 18:30</p>
+            <p>Vendredi : 09:00 – 18:30</p>
+            <p>Samedi : 09:00 – 14:00</p>
+            <p>Dimanche : Fermé</p>
+        </div>
+        <div>
+            <h3>Contact & Accès</h3>
+            <p>10 Pl. du 118ÈME Régiment d'Infanterie<br>29000 Quimper</p>
+            <p>Tél : 02 98 76 99 52</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2669.97092697173!2d-4.109319999999999!3d47.994949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4810d59079569835%3A0x8e76d0d918e2d4af!2sDesign%20Color's%20-%20Quimper!5e0!3m2!1sfr!2sfr!4v1776237653740!5m2!1sfr!2sfr" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </footer>
+
+</body>
+</html>
